@@ -1,0 +1,13 @@
+int check_clear(int level)    //모든 박스의 위치에 금이 있다면 게임을 클리어하는 함수.
+{
+	int i = 0;
+
+	for( i = 0; i < box_count; i++ )
+	{
+		if( cur_map[ box_coord[i][0] ][ box_coord[i][1] ] != '$' )
+		{
+			return -1;
+		}
+	}
+	return 0;
+}
